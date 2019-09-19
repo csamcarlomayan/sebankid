@@ -1,0 +1,25 @@
+{
+  "name": "csam.sebankid",
+  "version": "1.0.0",
+  "description": "csam swedish bankid auth",
+  "cordova": {
+    "id": "csam.sebankid",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csamcarlomayan/sebankid.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csamcarlomayan/sebankid/issues"
+  },
+  "homepage": "https://github.com/csamcarlomayan/sebankid#readme"
+}
