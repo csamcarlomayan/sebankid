@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6eff80d8-665c-434b-b3a5-00c2072f2217" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/android/sebankid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/sebankid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/sebankid.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/sebankid.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/sebankid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="226">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/sebankid.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -140,7 +130,7 @@
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32936078" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Palette&#9;" />
@@ -149,15 +139,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/sebankid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="51">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/sebankid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="226">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
