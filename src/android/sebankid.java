@@ -29,11 +29,11 @@ public class sebankid extends CordovaPlugin {
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
-        Intent intent = new Intent();
+        /* Intent intent = new Intent();
         intent.setPackage("com.bankid.bus");
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
-        startActivity(intent);
+        startActivity(intent); */
     }
 
     private void coolMethod(String message, CallbackContext callbackContext) {
