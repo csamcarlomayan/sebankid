@@ -48,10 +48,6 @@ public class sebankid extends CordovaPlugin {
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
         context.startActivity(intent);
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
+        
     }
 }
