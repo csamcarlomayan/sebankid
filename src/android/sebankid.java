@@ -26,7 +26,7 @@ public class sebankid extends CordovaPlugin {
     
         if (action.equals("startAuthCall")) {
             String token = args.getString(0);
-            this.startAuthCall(token, context);
+            this.startAuthCall(token, callbackContext);
             return true;
         }
         return false;
@@ -34,9 +34,9 @@ public class sebankid extends CordovaPlugin {
     public void startAuthCall(String starttoken, CallbackContext context) {
         System.out.println("test");
         if (starttoken != null && starttoken.length() > 0) {
-            callbackContext.success(starttoken + "FROM JAVA CODE");
+            context.success(starttoken + "FROM JAVA CODE");
         } else {
-            callbackContext.error("Expected one non-empty string argument.");
+            context.error("Expected one non-empty string argument.");
         }
         Intent intent = new Intent(context);
         intent.setPackage("com.bankid.bus");
