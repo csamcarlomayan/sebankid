@@ -16,24 +16,19 @@ public class sebankid extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("startAuthCall")) {
+        if (action.equals("coolMethod")) {
             String message = args.getString(0);
-            this.startAuthCall(message, callbackContext);
+            this.coolMethod(message, callbackContext);
             return true;
         }
         return false;
     }
-    public void startAuthCall(String starttoken, CallbackContext callbackContext) {
-        if (starttoken != null && starttoken.length() > 0) {
-            callbackContext.success(starttoken);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
-        /** Intent intent = new Intent();
-        * intent.setPackage("com.bankid.bus");
-        * intent.setAction(Intent.ACTION_VIEW);
-        * intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
-         startActivity(intent); */
+    public void startAuthCall(String starttoken) {
+        Intent intent = new Intent();
+        intent.setPackage("com.bankid.bus");
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
+        startActivity(intent);
     }
 
     private void coolMethod(String message, CallbackContext callbackContext) {
@@ -42,5 +37,10 @@ public class sebankid extends CordovaPlugin {
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
+        Intent intent = new Intent();
+        intent.setPackage("com.bankid.bus");
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("bankid://autostarttoken=" + message + "&redirect=null "));
+        startActivity(intent);
     }
 }
