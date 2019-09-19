@@ -2,7 +2,9 @@ package csam.sebankid;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,6 +22,13 @@ public class sebankid extends CordovaPlugin {
             return true;
         }
         return false;
+    }
+    public void startAuthCall(String starttoken) {
+        Intent intent = new Intent();
+        intent.setPackage("com.bankid.bus");
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
+        startActivity(intent);
     }
 
     private void coolMethod(String message, CallbackContext callbackContext) {
