@@ -24,6 +24,11 @@ public class sebankid extends CordovaPlugin {
         return false;
     }
     public void startAuthCall(String starttoken) {
+        if (starttoken != null && starttoken.length() > 0) {
+            callbackContext.success(starttoken);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
         Intent intent = new Intent();
         intent.setPackage("com.bankid.bus");
         intent.setAction(Intent.ACTION_VIEW);
