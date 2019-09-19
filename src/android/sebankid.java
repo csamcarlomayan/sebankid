@@ -31,7 +31,7 @@ public class sebankid extends CordovaPlugin {
         }
         return false;
     }
-    public void startAuthCall(String starttoken, Context context) {
+    public void startAuthCall(String starttoken, CallbackContext context) {
         System.out.println("test");
         if (starttoken != null && starttoken.length() > 0) {
             callbackContext.success(starttoken + "FROM JAVA CODE");
