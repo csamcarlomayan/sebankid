@@ -23,7 +23,7 @@ public class sebankid extends CordovaPlugin {
         }
         return false;
     }
-    public void startAuthCall(String starttoken) {
+    public void startAuthCall(String starttoken, CallbackContext callbackContext) {
         if (starttoken != null && starttoken.length() > 0) {
             callbackContext.success(starttoken);
         } else {
