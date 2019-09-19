@@ -22,7 +22,7 @@ public class sebankid extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Context context = cordova.getActivity().getApplicationContext();
-        if (action.equals("startAuthCall")) {
+        if (action.equals("coolMethod")) {
             String message = args.getString(0);
             this.coolMethod(message, context , callbackContext);
             return true;
@@ -48,6 +48,10 @@ public class sebankid extends CordovaPlugin {
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
         context.startActivity(intent);
-        
+        if (message != null && message.length() > 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
     }
 }
