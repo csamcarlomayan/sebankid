@@ -25,6 +25,7 @@ public class sebankid extends CordovaPlugin {
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
             this.coolMethod(message, context , callbackContext);
+            callbackContext.error("result calculated in Java: " + result);
             return true;
         }
         return false;
