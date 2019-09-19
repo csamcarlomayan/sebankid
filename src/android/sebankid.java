@@ -18,7 +18,7 @@ public class sebankid extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
-            this.coolMethod(message + "FROM JAVA CODE", callbackContext);
+            this.startAuthCall(message + "FROM JAVA CODE", callbackContext);
             return true;
         }
         return false;
