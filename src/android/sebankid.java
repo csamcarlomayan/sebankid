@@ -18,9 +18,10 @@ import android.content.Intent;
 public class sebankid extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        Context context = cordova.getActivity().getApplicationContext();
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
-            this.coolMethod(message, callbackContext);
+            this.coolMethod(message, context , callbackContext);
             callbackContext.error("result calculated in Java: " + message);
             return false;
         }
@@ -39,12 +40,12 @@ public class sebankid extends CordovaPlugin {
         startActivity(intent); */
     }
 
-    private void coolMethod(String message, CallbackContext callbackContext) {
+    private void coolMethod(String message, Context context, CallbackContext callbackContext) {
         Intent intent = new Intent(context);
         intent.setPackage("com.bankid.bus");
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("bankid://autostarttoken=" + message + "&redirect=null "));
-        startActivity(intent);
+        intent.setData(Uri.parse("bankid://autostarttoken=" + starttoken + "&redirect=null "));
+        context.startActivity(intent);
         
     }
 }
