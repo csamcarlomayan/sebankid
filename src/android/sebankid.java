@@ -41,7 +41,7 @@ public class sebankid extends CordovaPlugin {
     }
 
     private void coolMethod(String message, Context context, CallbackContext callbackContext) {
-        Intent intent = new Intent(context);
+        Intent intent = new Intent();
         intent.setPackage("com.bankid.bus");
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("bankid://autostarttoken=" + message + "&redirect=null "));
